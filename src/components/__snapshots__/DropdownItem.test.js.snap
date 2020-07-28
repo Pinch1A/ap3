@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownItem> renders without crashing 1`] = `
+<Item
+  isSelected={false}
+  onClick={[Function]}
+>
+  <styled.img
+    alt="Select"
+    src="test"
+  />
+  <styled.div>
+    Select
+  </styled.div>
+</Item>
+`;

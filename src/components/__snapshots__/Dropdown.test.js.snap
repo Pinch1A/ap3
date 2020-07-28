@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown> renders without crashing 1`] = `
+<styled.div>
+  <DropdownHeader
+    isOpen={false}
+    onClick={[Function]}
+    tabIndex="0"
+  >
+    <styled.input
+      onChange={[Function]}
+      placeholder="Select"
+      type="text"
+      value="Select"
+    />
+    <ChevronDown />
+  </DropdownHeader>
+</styled.div>
+`;

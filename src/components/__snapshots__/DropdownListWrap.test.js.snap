@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownListWrap> renders without crashing 1`] = `
+<styled.div>
+  <DropdownItem
+    flag="flag1"
+    isSelected={false}
+    key="0"
+    name="test1"
+    setSelected={[Function]}
+  />
+  <DropdownItem
+    flag="flag2"
+    isSelected={false}
+    key="1"
+    name="test2"
+    setSelected={[Function]}
+  />
+</styled.div>
+`;

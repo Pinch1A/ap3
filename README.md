@@ -1,5 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Thinking Process
+
+Before I start explaining my design process I would like to say, even I can imagine is not necessary, that the solution I came up with is based only on a screenshot and couple of key points ( hooks, design, tests, pagination)
+
+Based on this I had to take some key decision in order to let the component behave as expected:
+
+- On click of the dropdown placeholder, the Item list will appear
+  - When the Item List is visible, by clicking outside the list the list will disappear
+- | Select an Item
+  - when the list is visible, in order to keep performance on track I decided to limit the number of Item to 20 and paginate the data from the endpoint
+    - at the end of the first 20 elements a `raw` button will allow the user to load other 20 items
+  - by clicking an Item from the list, it gets selected and the list will close
+    - clicking again the dropdown placeholder, the list will show up again with the item matching the selected one will have a different UI ( as design suggested)
+  - | Search an Item
+    - when the list is visible the placeholder can be used to type and search for a specific Item name.
+      - The search will filter the result based on the whole dataSet returned by the endpoint
+    - If the placeholder already has a selected Item, we can still use the search input by deleting the pre-existing name in the input field.
+      - as soon as we cancel a letter from the existing selected item the flag will disappear assuming that we have in the input field is a simple string.
+
+### Those functionality and design decisions should have been part of the design process (Design + Product + Dev) which would have highlighted :
+
+- behaviour and expectations
+- UI / UX and CTA Interactions
+
+---
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -14,55 +40,6 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
